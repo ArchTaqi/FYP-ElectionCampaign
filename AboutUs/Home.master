@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="AboutUs_Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>DEC| Welcome to Digitilized Electroid Campaign</title>
+        <style type="text/css" >
+
+.html,body{
+ padding:0 0 0 0;
+ width:100%;
+ background: url("/images/sand.jpg") repeat-x;
+
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+.button{
+	background: #F3F3F3;
+	border: 1px solid #DCDCDC;
+	border-radius: 2px;
+	color: #444444;
+	cursor: pointer;
+	display: inline-block;
+	font: 700 11px Tahoma, Arial, sans-serif;
+	margin-right: 10px;
+	padding: 7px 12px 7px 12px;
+	position: relative;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #FFFFFF;
+}
+.button:hover{
+    border-color:#999999;
+	color: #333333;
+	text-decoration: none;
+}
+.Wraper{
+
+    width:65%; height:100%;
+    background: #f3f3f3 url(/images/bg_top2.jpg) repeat-x;
+    margin:0 auto;
+    /*background-color:black;*/
+
+}
+
+.Header{
+height: 50px;
+	padding: 10px 20px 0 20px;
+    text-shadow: #000 0px 1px 1px;
+}
+.Content{
+width:100%; height:60%; min-height:60%;
+background-color:#f3f3f3;
+
+}
+.Footer{
+ background-color:black;
+	
+	border-top: 2px solid #404345;
+	color: #939393;
+	float: left;
+	margin: 0 auto;
+    margin-top:20px;
+	padding: 8px 20px;
+	text-shadow: #111111 0px 1px 1px;
+	width: 96%;
+       text-align:right;
+
+    line-height:normal;
+}
+.Footer a{
+	color: #939393;
+	font-weight: bold;
+ 
+}
+
+
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div class="Wraper">
+<div class="Header">
+    <div style="width:50%; height:60%; float:left; text-align:left; line-height:100%;   ">
+        <asp:Label ID="Label2" runat="server" Text="DEC" Font-Size="XX-Large" ForeColor="White" Font-Names="Calibri"></asp:Label>&nbsp; <asp:Label ID="Label5" runat="server" Text="Digitilized Electroid campaign" Font-Size="x-small" ForeColor="White" Font-Names="Calibri"></asp:Label>   </div>
+<div style="width:50%; height:40%; float:left; text-align:right;">
+<asp:LinkButton ID="lnkbtnlogin" OnClick="lnkbtnlogin_Click" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="White" >Login</asp:LinkButton>&nbsp;&nbsp; <asp:Label ID="Label1" runat="server" Text=" | " Font-Names="Calibri" Font-Size="Small" ForeColor="White"></asp:Label>&nbsp;
+    <asp:LinkButton ID="lnkbtnsignup" OnClick="lnkbtnsignup_Click" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="White">Signup</asp:LinkButton>
+</div>
+<div style="width:100%; height:40%; float:left; text-align:left;">
+<asp:LinkButton ID="lnkbtnhome" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="White" OnClick="lnkbtnhome_Click">Home</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:LinkButton ID="lnkbtnaboutus" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="White" OnClick="lnkbtnaboutus_Click">About Us</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="lnkbtnteam" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="White" OnClick="lnkbtnteam_Click">Our Team</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:LinkButton ID="lnkbtncontactus" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="White" OnClick="lnkbtncontactus_Click">Contact Us</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+</div>
+
+
+</div>   
+    
+<div class="Content">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+</div>   
+    
+
+
+	
+<div class="Footer">
+<div style="width:50%; float:left; text-align:left;"><asp:Label ID="Label4" runat="server" Text="DEC | Copyright © 2014 Digitilized Electroid Campaign" Font-Names="Calibri" Font-Size="Small" ForeColor="#EEEEEE"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   </div>
+<div style="width:50%; float:left;">
+<asp:Label ID="Label3" runat="server" Text="follow us on " Font-Names="Calibri" Font-Size="Small" ForeColor="#EEEEEE"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:LinkButton ID="lnkbtnfb" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="White" OnClick="lnkbtnfb_Click" >facebook</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:LinkButton ID="lnkbtngplus" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="White" OnClick="lnkbtngplus_Click">google +</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="lnkbtntwitter" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="White" OnClick="lnkbtntwitter_Click">twitter</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:LinkButton ID="lnkbtnytube" runat="server" Font-Names="Calibri" Font-Size="Small" ForeColor="White" OnClick="lnkbtnytube_Click">youtube</asp:LinkButton>&nbsp;&nbsp;&nbsp;&nbsp;
+</div></div>
+
+
+</div>
+
+
+
+
+    
+    </form>
+</body>
+</html>

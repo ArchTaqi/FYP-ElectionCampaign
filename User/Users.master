@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Users.master.cs" Inherits="Users" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>DEC| Welcome to Digitilized Electroid Campaign</title>
+    <link href="../StyleSheet/StyleSheet1.css" rel="stylesheet" />
+    <link href="../StyleSheet/StyleSheet2.css" rel="stylesheet" />
+    <script src="../JavaScript/JavaScript1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrap">
+
+            <div id="header">
+                <div id="top">
+                    <div class="left">
+                        <p>
+                            Welcome, <strong>
+                                <asp:Label ID="LblUserLogin" runat="server" Text="Label" Font-Names="Calibri" Font-Size="8" ForeColor="White"></asp:Label></strong> [
+                            <asp:LinkButton ID="Linkbutton1" runat="server" Font-Names="Calibri" Font-Size="X-Small" ForeColor="#FF3300" Text="Logout" OnClick="logout_Click">Logout</asp:LinkButton>
+                            ]
+                        </p>
+                    </div>
+                    <div class="right">
+                        <div class="align-right">
+                            <p><strong>
+                                <asp:Label ID="LabelLastLogin" runat="server" Text="Label" Font-Names="Calibri" Font-Size="8" ForeColor="White" Visible="False"></asp:Label></strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="nav">
+                    <ul>
+                        <li class="upp"><a href="../User/UserHomePage.aspx">Home</a></li>
+                        <li class="upp"><a href="../User/UserProfile.aspx">My Profile</a></li>
+                        <li class="upp"><a href="../User/PackagesDetails.aspx">Packages</a>
+                        </li>
+                        <li class="upp"><a href="#">My Account</a>
+                            <ul>
+                                <li class="b1"><a class="icon page" href="../User/Mysubscription.aspx">Current Accounts</a></li>
+                                <li class="b2"><a class="icon add_page" href="../User/Accounthistory.aspx">Account History</a></li>
+                            </ul>
+                        </li>
+                        <li class="upp"><a href="../User/Purchasepackages.aspx">Purchase Package</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="content">
+                <div id="sidebar">
+                    <div class="box">
+                        <div class="h_title">&#8250; Notifications</div>
+                        <ul>
+                            <li class="b1"><a class="icon page" href="../User/PostNotification.aspx">New Post</a></li>
+                            <li class="b2"><a class="icon add_page" href="../User/Mynotifications.aspx">My Notification</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="box">
+                        <div class="h_title">&#8250; Articles</div>
+                        <ul>
+                            <li class="b1"><a class="icon page" href="../User/PostArticle.aspx">New Post</a></li>
+                            <li class="b2"><a class="icon add_page" href="../User/MyArticles.aspx">My Articles</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="box">
+                        <div class="h_title">&#8250; Videos</div>
+                        <ul>
+                            <li class="b1"><a class="icon page" href="../User/PostVideos.aspx">New Post</a></li>
+                            <li class="b1"><a class="icon photo" href="../User/Myvideos.aspx">My Videos</a></li>
+                        </ul>
+                       
+                    </div>
+
+                    <div class="box">
+                        <div class="h_title">&#8250; Events</div>
+                        <ul>
+                            <li class="b1"><a class="icon page" href="../User/PostEvent.aspx">New Post</a></li>
+                            <li class="b1"><a class="icon photo" href="../User/MyEvents.aspx">Show All</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="main">
+                    <div class="clear"></div>
+
+                    <div class="full_w">
+                        <%--<div class="h_title"> Menu </div>--%>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+
+
+
+
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div id="footer">
+                <div class="left">
+                    <p><a href="../AboutUs/Home.aspx">Dititized Electroid Campaign</a> | User Panel</p>
+                </div>
+                <div class="right">
+                    <%--<p><a href="">Example link 1</a> | <a href="">Example link 2</a></p>--%>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+</body>
+</html>
