@@ -5,6 +5,7 @@ My Asp.net FYP Project in  Asp.net with MSSQL Server as database.<br />
 This is my FYP project. It is usually and online election campaign which has two parts one is a Asp.net Web Application and other is an Android App. Website has provided an interface to both public and politicians for communication in the form of text notifications, video, messages, articles and events they are organizing i.e convention etc. On the other hand public using their android mobile can search politicians with reference to constituency, parties, cities and view their latest alert and provide feedback.
 <br />
 ## Screenshots
+![Account Creation Screen](images/EIS Logo Only.png?raw=true "Logo")
 ### Accounts
 ![Account Creation Screen](media/request_account.png?raw=true "Account Creation")
 ![Account Login Screen](media/account_login.png?raw=true "Account Login")
